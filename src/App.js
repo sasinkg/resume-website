@@ -2,6 +2,8 @@ import React from 'react';
 import Header from './components/Header';
 import Experience from './components/Experience';
 import Education from './components/Education';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
 import './App.css';
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
       </div>
       <div className="right-column">
         <Education />
+        <Projects />
       </div>
     </div>
   );

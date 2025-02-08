@@ -1,10 +1,28 @@
 /* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #1a1a1a;
   color: #e0e0e0;
+}
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; /* Bold */
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500; /* Medium */
+}
+h4 { 
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300; /* Regular */
 }
 
 .app {
@@ -129,17 +147,83 @@ body {
   color: #a0a0a0;
 }
 
+/* Desktop Header */
+.desktop-header {
+  text-align: center;
+  padding: 20px;
+  background-color: #2a2a2a;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.desktop-header .profile-pic {
+  width: 150px; /* Set a fixed width */
+  height: 150px; /* Set a fixed height (must match width for a perfect circle) */
+  border-radius: 50%; /* Makes the image circular */
+  border: 3px solid #4dabf7; /* Optional: Adds a blue border */
+  object-fit: cover; /* Ensures the image fills the circle without distortion */
+  margin-bottom: 20px;
+}
+
+/* Profile Picture in Mobile Sticky Header */
+.mobile-sticky-header .sticky-profile-pic {
+  width: 40px; /* Set a fixed width */
+  height: 40px; /* Set a fixed height (must match width for a perfect circle) */
+  border-radius: 50%; /* Makes the image circular */
+  border: 2px solid #4dabf7; /* Optional: Adds a blue border */
+  object-fit: cover; /* Ensures the image fills the circle without distortion */
+}
+
+.desktop-header h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; /* Bold */
+}
+
+.desktop-header h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 500; /* Medium */
+}
+
+.desktop-header p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400; /* Regular */
+}
+
+.desktop-header .social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.desktop-header .social-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.desktop-header .social-links a:hover {
+  color: #4dabf7;
+}
+
 /* Mobile Sticky Header */
 .mobile-sticky-header {
-  display: none; /* Hidden by default */
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: -100px; /* Start off-screen */
+  left: 0;
+  right: 0;
   background-color: #2a2a2a;
   padding: 10px 20px;
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: top 0.5s ease; /* Smooth transition */
+}
+
+.mobile-sticky-header.visible {
+  top: 0; /* Slide into view */
 }
 
 .mobile-sticky-header .sticky-profile-pic {
@@ -147,13 +231,15 @@ body {
   height: 40px;
   border-radius: 50%;
   border: 2px solid #4dabf7;
+  object-fit: cover;
 }
 
 .mobile-sticky-header h1 {
-  font-size: 1.5rem;
-  margin: 0;
-  color: #4dabf7;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; /* Bold */
 }
+
+
 
 .mobile-sticky-header .sticky-social-links {
   display: flex;
@@ -161,36 +247,10 @@ body {
 }
 
 .mobile-sticky-header .sticky-social-links a {
-  color: #e0e0e0;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500; /* Medium */
 }
 
 .mobile-sticky-header .sticky-social-links a:hover {
   color: #4dabf7;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .app {
-    flex-direction: column;
-    padding: 0;
-  }
-
-  .left-column,
-  .middle-column,
-  .right-column {
-    border-radius: 0;
-    box-shadow: none;
-    margin-bottom: 20px;
-  }
-
-  .mobile-sticky-header {
-    display: flex; /* Show sticky header on mobile */
-  }
-
-  .desktop-header {
-    display: none; /* Hide desktop header on mobile */
-  }
 }

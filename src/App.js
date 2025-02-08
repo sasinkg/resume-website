@@ -11,6 +11,7 @@ function App() {
     <div className="app">
       <div className="left-column">
         <Header />
+        <Skills />
       </div>
       <div className="middle-column">
         <Experience />

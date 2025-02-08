@@ -3,7 +3,7 @@ import React from 'react';
 const Projects = () => {
   return (
     <section className="my-5">
-      <h2>Projects</h2>
+      <h1>Projects</h1>
       <div>
         <h3>“Early Bird” Alarm Clock | Hardware & Software</h3>
         <p>Designed, built, and programmed an alarm clock robot that runs away from the user when the alarm turns on.</p>

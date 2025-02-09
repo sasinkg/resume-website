@@ -23,25 +23,24 @@ const Skills = () => {
   };
 
   return (
-    <section className="my-5">
-      <p></p>
-      <h1 className="text-xl font-bold">Skills</h1>
+    <section className="my-5 p-4 bg-[#2a2a2a] rounded-lg shadow-lg">
+      <h2 className="text-xl font-bold text-[#4dabf7]">Skills</h2>
       {Object.entries(categories).map(([category, skills]) => (
         <div key={category} className="mt-3">
-          <h4 
+          <h3 
             onClick={() => toggleCategory(category)} 
-            className="text-lg font-semibold cursor-pointer"
+            className="text-lg font-semibold cursor-pointer text-[#e0e0e0] flex items-center"
           >
-            {category} {openCategories[category] ? '▼' : '▶'}
-          </h4>
+            {category} <span className="ml-2">{openCategories[category] ? '▼' : '▶'}</span>
+          </h3>
           <motion.div 
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: openCategories[category] ? "auto" : 0, opacity: openCategories[category] ? 1 : 0 }}
-            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+            transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
             className="overflow-hidden"
           >
             {openCategories[category] && (
-              <ul className="ml-5 mt-2 list-disc">
+              <ul className="ml-5 mt-2 list-disc text-[#a0a0a0]">
                 {skills.map((skill) => (
                   <li key={skill} className="text-md">{skill}</li>
                 ))}

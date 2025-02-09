@@ -243,12 +243,14 @@ p {
 
 .mobile-sticky-header .sticky-social-links {
   display: flex;
+  flex-direction: row;
   gap: 10px;
 }
 
 .mobile-sticky-header .sticky-social-links a {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500; /* Medium */
+  color: #e0e0e0;
 }
 
 .mobile-sticky-header .sticky-social-links a:hover {

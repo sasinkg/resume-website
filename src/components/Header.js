@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import profileImage from './images/profile.jpg'; // Adjust the path as needed
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50); // Show header after scrolling 50px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
       {/* Desktop Header */}
@@ -26,8 +37,8 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Sticky Header */}
-      <div className="mobile-sticky-header">
+      {/* Sticky Mobile Header (Appears on Scroll) */}
+      <div className={`mobile-sticky-header ${isScrolled ? "visible" : ""}`}>
         <img src={profileImage} alt="Your Name" className="sticky-profile-pic" />
         <h1>Sasin Gudipati</h1>
         <div className="sticky-social-links">

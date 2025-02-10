@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Experience = () => {
   const categories = {
-    "Programming": [
+    "Software Engineer | Boeing Co.": [
       "Enhanced and redesigned various web-based JavaScript React.js (Javascript/Typescript) simulation apps by adding critical features such as a refresh to read simulation status, filtering development level simulations, error notifications, and many more features, ensuring seamless functionality and reliability.", 
       "Implemented recursion based algorithms to optimize and automate simulation builds and efficiently use resources, cutting expenditure by 4%.", 
       "Automated release of Java, C# and Python-based engineering applications using the Continuous Integration and Continuous Development (CI/CD) pipeline system to decrease the release process time from 2 days to 30 minutes.", 
@@ -14,7 +14,7 @@ const Experience = () => {
       "Languages Used: Java, React.js, Node.js, JavaScript, C/C++, Python, Git"
 
     ],
-    "Design & Modeling": [
+    "Software Engineer Intern | Garmin Int.": [
       "Implemented and integrated the new Vulkan enabled IMG-BXS-4-64 Driver into the Garmin In-Flight Display 3 (GIFD-3).", 
       "Developed driver code algorithms to match Vulkan graphics standards.", 
       "Successfully addressed and resolved 1500 coverage holes, enhancing the quality and reliability of the system during the graphics transition from OpenGL to the Vulkan API for FAA Certification.", 

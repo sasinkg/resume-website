@@ -31,7 +31,7 @@ const Skills = () => {
             onClick={() => toggleCategory(category)} 
             className="text-lg font-semibold cursor-pointer text-[#e0e0e0] flex items-center"
           >
-            {category} <span className="ml-2">{openCategories[category] ? '▼' : '▶'}</span>
+            {category} <span className="ml-2">{openCategories[category] ? '' : ''}</span>
           </h3>
           <motion.div 
             initial={{ height: 0, opacity: 0 }}

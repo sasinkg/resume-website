@@ -20,7 +20,7 @@ const Header = () => {
         <img src={profileImage} alt="Your Name" className="profile-pic" />
         <h1>Sasin Gudipati</h1>
         <h4>Software Engineer @ Boeing</h4>
-        <p>Building robust and efficient solutions for the future.</p>
+        
         <div className="social-links">
           <a href="https://www.linkedin.com/in/sasingudipati" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin"></i> LinkedIn
